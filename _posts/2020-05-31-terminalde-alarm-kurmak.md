@@ -1,8 +1,9 @@
 ---
-published: false
+published: true
 ---
 
 ---
+published: true
 title: Terminalde Alarm Kurmak
 ---
 
@@ -40,4 +41,3 @@ Medya oynatıcı olarak “**mpv**” yi kullanacağım. Öncelikle “mpv” yi
 	sleep 25m && mpv alarm.ogg
     
 25 dakika sonra çalmasını istediğimiz ses dosyası çalacak. Terminalde alarm kurmak bu kadar basit.
-  
