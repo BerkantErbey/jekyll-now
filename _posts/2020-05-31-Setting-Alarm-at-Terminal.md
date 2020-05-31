@@ -20,7 +20,7 @@ s->second , m->minute h->hour
 
 We will use “** && **” to run two commands together in the terminal.
 
-	command1 && command2
+command1 && command2
     
 I will use “** MPV **” as the media player. First of all, let's run command to add ppa of mpv.
 	
