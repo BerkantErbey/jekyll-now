@@ -3,34 +3,39 @@ published: true
 ---
 
 
-Bu yazıda terminalde nasıl alarm kurulacağını anlatacağım.
+## Setting Alarm at Terminal
 
-Kimi zaman süre tutmaya ihtiyacımız olur bilgisayar kullanırken. Bu gibi durumlarda telefondan ya da websitesi ya da bir uygulamadan alarm kurmak yerine terminali kullanabiliriz.
 
-Temel olarak mantığımız belirli bir süre bekleyip ses çalmak olacak. Bunun için terminaldeki “**sleep**” komutunu kullanacağız. Ses çalmak içinde terminalden çalışabilen herhangi bir medya oynatıcıyı kullanacağız.
+In this post, I will explain how to set up an alarm at the terminal.
+
+Sometimes we need to set alarms while working on the computer. In such cases, we can use the terminal instead of phone, website or an gui-app.
+
+Basically, our logic will be to wait for a certain time and play sound. We will use “** sleep **” command to wait for a certain time. To play audio We will use any media player that can work from cli.
 
 	sleep 5s
     
-Sleep komutundan sonra yazdığımız parametre bekleyeceğimiz süreyi belirtiyor.
+The parameter we write after the sleep command specifies the time we wait.
 
-s->saniye , m->dakika h->saat
+s->second , m->minute h->hour
 
-Terminalde iki komutu birlikte çalıştırabilmek için “**&&**” kullanacağız
+We will use “** && **” to run two commands together in the terminal.
 
 	command1 && command2
     
-Medya oynatıcı olarak “**mpv**” yi kullanacağım. Öncelikle “mpv” yi yükleyelim.
-“mpv” nin bulunduğu paketin adresini kendi güncelleme listelerimize eklemeliyiz.
+I will use “** MPV **” as the media player. First of all, let's run command to add ppa of mpv.
 	
     sudo add-apt-repository ppa:mc3man/mpv-tests
+
+Then run the command to install MPV
+
 	sudo apt update && sudo apt install mpv
     
-“mpv” yi yükledik. “mpv” nin çalışma şekli
+MPV works like that
 	
     mpv filename
     
-Şimdi iki komutumuzu beraber çalıştıralım
+Let's run our two commands together
 
 	sleep 25m && mpv alarm.ogg
     
-25 dakika sonra çalmasını istediğimiz ses dosyası çalacak. Terminalde alarm kurmak bu kadar basit.
+After 25 minutes, the audio file we want it to play will be played. Setting up an alarm in the terminal is that simple.
