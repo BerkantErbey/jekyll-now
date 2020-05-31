@@ -9,19 +9,21 @@ Sometimes we need to set alarms while working on the computer. In such cases, we
 
 Basically, our logic will be to wait for a certain time and play sound. We will use “**sleep**” command to wait for a certain time. To play audio We will use any media player that can work from cli.
 
-	sleep 5s
+    sleep 5s
 The parameter we write after the sleep command specifies the time we wait.
 
 s->second , m->minute h->hour
 
 We will use “**&&**” to run two commands together in the terminal.
-command1 && command2    
+    command1 && command2
+	
 I will use “**MPV**” as the media player. First of all, let's run command to add ppa of mpv.
 
  	sudo add-apt-repository ppa:mc3man/mpv-tests
 Then run the command to install MPV
 
 	sudo apt update && sudo apt install mpv
+	
 MPV works like that
 
 	mpv filename
