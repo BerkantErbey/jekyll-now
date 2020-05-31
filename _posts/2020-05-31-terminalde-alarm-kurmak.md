@@ -2,10 +2,7 @@
 published: true
 ---
 
----
-published: true
-title: Terminalde Alarm Kurmak
----
+
 
 ## Terminalde Alarm Kurmak
 
