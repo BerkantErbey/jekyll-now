@@ -22,9 +22,11 @@ I will use **MPV** as the media player. First of all, let's run command to add p
 ```sudo add-apt-repository ppa:mc3man/mpv-tests```
 
 MPV works like that
+
 ```mpv filename```
 
 Let's run our two commands together:
+
 ```sleep 25m && mpv Music/alarm.ogg```
 
 After 25 minutes, the audio file we want it to play will be played. Setting up an alarm in the terminal is that simple.
