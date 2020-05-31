@@ -3,9 +3,6 @@ published: true
 ---
 
 
-## Setting Alarm at Terminal
-
-
 In this post, I will explain how to set up an alarm at the terminal.
 
 Sometimes we need to set alarms while working on the computer. In such cases, we can use the terminal instead of phone, website or an gui-app.
