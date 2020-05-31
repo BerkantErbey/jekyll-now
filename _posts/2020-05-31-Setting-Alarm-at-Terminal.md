@@ -8,8 +8,10 @@ In this post, I will explain how to set up an alarm at the terminal.
 Sometimes we need to set alarms while working on the computer. In such cases, we can use the terminal instead of phone, website or an gui-app.
 
 Basically, our logic will be to wait for a certain time and play sound. We will use “**sleep**” command to wait for a certain time. To play audio We will use any media player that can work from cli.
-
-    sleep 5s
+```bash
+sleep 5s
+```
+    
 The parameter we write after the sleep command specifies the time we wait.
 
 s->second , m->minute h->hour
