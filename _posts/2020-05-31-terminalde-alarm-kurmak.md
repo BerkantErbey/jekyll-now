@@ -3,10 +3,6 @@ published: true
 ---
 
 
-
-## Terminalde Alarm Kurmak
-
-
 Bu yazıda terminalde nasıl alarm kurulacağını anlatacağım.
 
 Kimi zaman süre tutmaya ihtiyacımız olur bilgisayar kullanırken. Bu gibi durumlarda telefondan ya da websitesi ya da bir uygulamadan alarm kurmak yerine terminali kullanabiliriz.
