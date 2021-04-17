@@ -3,7 +3,11 @@ published: true
 ---
 In this post, I will explain
 * What is Ansible?
+  * RedHat defines it as follow "Simple, **agentless** it automation that anyone can use". Agentless means that there is no need for any ansible service to work in the environment to be managed.
 * How to install Ansible?
+```sudo apt update && sudo apt install software-properties-common
+   sudo apt-add-repository --yes --update ppa:ansible/ansible && sudo apt install ansible```
+
 * Simple use-case demo (Installing a software)
 
 Sometimes we need to set alarms while working on computer. In such cases, we can use the terminal instedad of phone, website or gui-app.
