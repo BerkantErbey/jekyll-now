@@ -22,10 +22,7 @@ ansible all -m ping --ask-pass
 Sometimes we need to install package/software to many servers. In such cases, we can use the automation tool like Ansible.
 Thanks to Ansible, we can perform parallel and multiple tasks
 
-Basically, we are waiting for a certain time and play sound for alarm. We will use **sleep** command to wait for a certain time.
-To play audio we will use any media player that can work from terminal.
 
-The parameter we write after the **sleep** command specifies the time we wait.
 
 ```ansible-playbook playbook.yml -f 10```
 
