@@ -11,32 +11,22 @@ sudo apt update && sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible && sudo apt install ansible
 ```
 
+Checking whether is working
+
+```
+ansible all -m ping --ask-pass
+```
+
 * Simple use-case demo (Installing a software)
 
-Sometimes we need to set alarms while working on computer. In such cases, we can use the terminal instedad of phone, website or gui-app.
+Sometimes we need to install package/software to many servers. In such cases, we can use the automation tool like Ansible.
+Thanks to Ansible, we can perform parallel and multiple tasks
 
 Basically, we are waiting for a certain time and play sound for alarm. We will use **sleep** command to wait for a certain time.
 To play audio we will use any media player that can work from terminal.
 
 The parameter we write after the **sleep** command specifies the time we wait.
 
-```sleep 5s```
+```ansible-playbook playbook.yml -f 10```
 
-(s->second, m->minute, h->hour)
-
-We will use **&&** to run two commands together in terminal.
-
-```command1 && command2```
-
-I will use **MPV** as the media player. First of all, let's run command to add ppa of MPV.
-```sudo add-apt-repository ppa:mc3man/mpv-tests```
-
-MPV works like that
-
-```mpv filename```
-
-Let's run our two commands together:
-
-```sleep 25m && mpv Music/alarm.ogg```
-
-After 25 minutes, the audio file we want it to play will be played. Setting up an alarm in the terminal is that simple.
+ansible-lint verify-apache.yml
