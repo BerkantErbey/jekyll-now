@@ -27,13 +27,13 @@ At first , we create project folder
     cd testLab
 
 We write the machines in the inventory file to determine which machines the commands will run on
-
+  ```
   # hosts (Inventory file)
   [test]
   192.168.1.143
-
+  ```
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
-  
+
 
 
 
