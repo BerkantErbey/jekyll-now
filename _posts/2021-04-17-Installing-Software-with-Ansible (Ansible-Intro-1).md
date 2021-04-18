@@ -14,7 +14,7 @@ In this post, I will explain
 
 Checking whether is working
 
-  ansible all -m ping --ask-pass
+    ansible all -m ping --ask-pass
 
 * Simple use-case demo (Installing a software)
 
@@ -23,8 +23,8 @@ Thanks to Ansible, we can perform parallel and multiple tasks
 
 At first , we create project folder
 
-  mkdir -pv testLab
-  cd testLab
+    mkdir -pv testLab
+    cd testLab
 
 We write the machines in the inventory file to determine which machines the commands will run on
 
@@ -32,8 +32,7 @@ We write the machines in the inventory file to determine which machines the comm
   [test]
   192.168.1.143
 
-  ```
-  # myPlayBook.yaml (Playbook file)
+  ```# myPlayBook.yaml (Playbook file)
   ---
   - name: Remove Tixati, Install qbittorrent
     hosts: test
@@ -52,8 +51,7 @@ We write the machines in the inventory file to determine which machines the comm
       apt:
         name: qbittorrent
         state: present
-        update_cache: yes
-    ```
+        update_cache: yes```
 
 
 
