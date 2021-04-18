@@ -15,7 +15,7 @@ In this post, I will explain
 Checking whether is working
 
 ```ansible all -m ping --ask-pass```
-   
+
 
 * Simple use-case demo (Installing a software)
 
@@ -38,8 +38,8 @@ I solved the authentication problem on the host machine by adding the main machi
 
 We can list tasks in myPlaybook.yml with this command  
 
-	ansible-playbook --list-tasks myPlayBook.yml
-    
+  ansible-playbook --list-tasks myPlayBook.yml
+
 This playbook contains 3 tasks.
 
 1.Remove tixati program on host
@@ -57,5 +57,3 @@ This playbook contains 3 tasks.
 We run our commands on desired machines with the following command
 
   	ansible-playbook -i hosts.txt myPlayBook.yml
-
-  
