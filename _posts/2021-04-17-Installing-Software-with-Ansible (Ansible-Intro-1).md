@@ -32,6 +32,7 @@ We write the machines in the inventory file to determine which machines the comm
   [test]
   192.168.1.143
 
+  ```
   # myPlayBook.yaml (Playbook file)
   ---
   - name: Remove Tixati, Install qbittorrent
@@ -52,6 +53,7 @@ We write the machines in the inventory file to determine which machines the comm
         name: qbittorrent
         state: present
         update_cache: yes
+    ```
 
 
 
