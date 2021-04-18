@@ -26,20 +26,31 @@ At first , we create project folder
   mkdir -pv testLab
   cd testLab
 
-We write the machines in the inventory file to determine which machines the commands will run on
+We write the machines in the inventory file to determine which machines the commands will run on.
   ```
   # hosts.txt (Inventory file)
   [test]
   192.168.1.143
   ```
 
-  * 
+I solved the authentication problem on the host machine by adding the main machine's public key under the authorized_keys file (/root/.ssh/authorized_keys)
+
+We can list tasks in myPlaybook.yml with this command  
+
+	ansible-playbook --list-tasks myPlayBook.yml
+    
+This playbook contains 3 tasks.
+
+** Remove tixati program on host
+** Add qbittorrent's repo to host
+** Install qbittorrent to host
+
+
 
 
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
 
 
-	ansible-playbook --list-tasks myPlayBook.yml
 
   	ansible-playbook -i hosts.txt myPlayBook.yml
 
