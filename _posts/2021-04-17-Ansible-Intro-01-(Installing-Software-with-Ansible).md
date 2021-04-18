@@ -45,6 +45,13 @@ This playbook contains 3 tasks.
 
 {% gist c1f14b461868fc75bc8c22f3568cfa4f %}
 
+```yaml
+tasks:
+- name: ensure tixati is removed
+  apt:
+    name: tixati
+    state: absent
+```
 
 2.Add qbittorrent's repo to host
 
