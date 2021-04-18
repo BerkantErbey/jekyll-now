@@ -24,7 +24,7 @@ Thanks to Ansible, we can perform parallel and multiple tasks
 
 At first , we create project folder
 
-  ```mkdir -pv testLab && cd testLab```
+```mkdir -pv testLab && cd testLab```
 
 We write the machines in the inventory file to determine which machines the commands will run on.
   ```
@@ -45,14 +45,6 @@ This playbook contains 3 tasks.
 
 {% gist c1f14b461868fc75bc8c22f3568cfa4f %}
 
-```yaml
-tasks:
-- name: ensure tixati is removed
-  apt:
-    name: tixati
-    state: absent
-```
-
 2.Add qbittorrent's repo to host
 
 {% gist b735ef3ce1546ec66bd1151650458f37 %}
@@ -61,12 +53,10 @@ tasks:
 
 {% gist 18496abe2110db95f55c17aee3e97004 %}
 
-
-
-
+You can access the full playbook here
 
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
 
 We run our commands on desired machines with the following command
 
-  ```ansible-playbook -i hosts.txt myPlayBook.yml```
+```ansible-playbook -i hosts.txt myPlayBook.yml```
