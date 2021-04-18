@@ -14,7 +14,8 @@ In this post, I will explain
 
 Checking whether is working
 
-  ansible all -m ping --ask-pass
+```ansible all -m ping --ask-pass```
+   
 
 * Simple use-case demo (Installing a software)
 
@@ -53,6 +54,7 @@ This playbook contains 3 tasks.
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
 
 
+We run our commands on desired machines with the following command
 
   	ansible-playbook -i hosts.txt myPlayBook.yml
 
