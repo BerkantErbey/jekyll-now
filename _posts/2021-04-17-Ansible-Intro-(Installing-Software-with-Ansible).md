@@ -32,6 +32,10 @@ We write the machines in the inventory file to determine which machines the comm
   [test]
   192.168.1.143
   ```
+
+  * 
+
+
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
 
 
