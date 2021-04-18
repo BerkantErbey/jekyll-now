@@ -37,15 +37,22 @@ I solved the authentication problem on the host machine by adding the main machi
 
 We can list tasks in myPlaybook.yml with this command  
 
-  ansible-playbook --list-tasks myPlayBook.yml
+  ```ansible-playbook --list-tasks myPlayBook.yml```
 
 This playbook contains 3 tasks.
 
 1.Remove tixati program on host
 
+{% gist c1f14b461868fc75bc8c22f3568cfa4f %}
+
+
 2.Add qbittorrent's repo to host
 
+{% gist b735ef3ce1546ec66bd1151650458f37 %}
+
 3.Install qbittorrent to host
+
+{% gist 18496abe2110db95f55c17aee3e97004 %}
 
 
 
