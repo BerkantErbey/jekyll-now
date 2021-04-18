@@ -32,26 +32,7 @@ We write the machines in the inventory file to determine which machines the comm
   [test]
   192.168.1.143
 
-  ```# myPlayBook.yaml (Playbook file)
-  ---
-  - name: Remove Tixati, Install qbittorrent
-    hosts: test
-    remote_user: root
-
-    tasks:
-    - name: ensure tixati is removed
-      apt:
-        name: tixati
-        state: absent
-    - name: ensure the qbittorrent repository added
-      ansible.builtin.apt_repository:
-        repo: 'ppa:qbittorrent-team/qbittorrent-stable'
-        codename: focal
-    - name: ensure qbittorrent package installed
-      apt:
-        name: qbittorrent
-        state: present
-        update_cache: yes```
+  https://gist.github.com/BerkantErbey/87c1ab6de1f3fd40728db58e2d7e4097
 
 
 
