@@ -6,14 +6,13 @@ In this post, I will explain
   * RedHat defines it as follow "Simple, **agentless** it automation that anyone can use". Agentless means that there is no need for any ansible service to work in the environment to be managed.
 * How to install Ansible?
 
-```sudo apt update && sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible && sudo apt install ansible```
+```sudo apt update && sudo apt install software-properties-common -y
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible -y```
 
 Checking whether is working
 
-```
-ansible all -m ping --ask-pass
-```
+```ansible all -m ping --ask-pass```
 
 * Simple use-case demo (Installing a software)
 
