@@ -7,8 +7,9 @@ In this post, I will explain
 * How to install Ansible?
 
     sudo apt update && sudo apt install software-properties-common -y
+
     sudo apt-add-repository --yes --update ppa:ansible/ansible
-    
+
     sudo apt install ansible -y
 
 Checking whether is working
@@ -20,8 +21,40 @@ Checking whether is working
 Sometimes we need to install package/software to many servers. In such cases, we can use the automation tool like Ansible.
 Thanks to Ansible, we can perform parallel and multiple tasks
 
+At first , we create project folder
+
+  mkdir -pv testLab
+  cd testLab
+
+We write the machines in the inventory file to determine which machines the commands will run on
+
+  # hosts (Inventory file)
+  [test]
+  192.168.1.143
+
+  # myPlayBook.yaml (Playbook file)
+  ---
+  - name: Remove Tixati, Install qbittorrent
+    hosts: test
+    remote_user: root
+
+    tasks:
+    - name: ensure tixati is removed
+      apt:
+        name: tixati
+        state: absent
+    - name: ensure the qbittorrent repository added
+      ansible.builtin.apt_repository:
+        repo: 'ppa:qbittorrent-team/qbittorrent-stable'
+        codename: focal
+    - name: ensure qbittorrent package installed
+      apt:
+        name: qbittorrent
+        state: present
+        update_cache: yes
 
 
-```ansible-playbook myPlayBook.yml -f 10```
 
-```ansible-lint myPlayBook.yml```
+  ansible-playbook myPlayBook.yml -f 10
+
+  ansible-lint myPlayBook.yml
