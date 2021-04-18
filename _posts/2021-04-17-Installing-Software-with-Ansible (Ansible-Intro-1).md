@@ -17,10 +17,12 @@ Checking whether is working
 * Simple use-case demo (Installing a software)
 
 Sometimes we need to install package/software to many servers. In such cases, we can use the automation tool like Ansible.
-Thanks to Ansible, we can perform parallel and multiple tasks
+Thanks to Ansible, we can perform parallel and multiple tasks.
+
+We write the hosts in the inventory file to determine which hosts the commands will run on
 
 
 
-```ansible-playbook myPlayBook.yml -f 10```
+  ansible-playbook myPlayBook.yml -f 10
 
-```ansible-lint myPlayBook.yml```
+  ansible-lint myPlayBook.yml
