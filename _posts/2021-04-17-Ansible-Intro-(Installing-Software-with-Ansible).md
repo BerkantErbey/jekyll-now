@@ -47,8 +47,9 @@ This playbook contains 3 tasks.
 2.Add qbittorrent's repo to host
 
 3.Install qbittorrent to host
-  mkdir -pv testLab
-  cd testLab
+
+  ```mkdir -pv testLab```
+  ```cd testLab```
 
 
 
@@ -57,4 +58,4 @@ This playbook contains 3 tasks.
 
 We run our commands on desired machines with the following command
 
-  	ansible-playbook -i hosts.txt myPlayBook.yml
+	```ansible-playbook -i hosts.txt myPlayBook.yml```
