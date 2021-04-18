@@ -48,8 +48,7 @@ This playbook contains 3 tasks.
 
 3.Install qbittorrent to host
 
-  ```mkdir -pv testLab```
-  ```cd testLab```
+  ```mkdir -pv testLab && cd testLab```
 
 
 
