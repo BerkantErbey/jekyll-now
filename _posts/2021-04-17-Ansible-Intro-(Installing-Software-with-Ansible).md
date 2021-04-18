@@ -41,9 +41,11 @@ We can list tasks in myPlaybook.yml with this command
     
 This playbook contains 3 tasks.
 
-** Remove tixati program on host
-** Add qbittorrent's repo to host
-** Install qbittorrent to host
+	* Remove tixati program on host
+
+	* Add qbittorrent's repo to host
+
+	* Install qbittorrent to host
 
 
 
