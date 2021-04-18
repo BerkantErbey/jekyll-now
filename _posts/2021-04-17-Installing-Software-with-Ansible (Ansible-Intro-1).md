@@ -6,10 +6,8 @@ In this post, I will explain
   * RedHat defines it as follow "Simple, **agentless** it automation that anyone can use". Agentless means that there is no need for any ansible service to work in the environment to be managed.
 * How to install Ansible?
 
-```
-sudo apt update && sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible && sudo apt install ansible
-```
+```sudo apt update && sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible && sudo apt install ansible```
 
 Checking whether is working
 
@@ -24,6 +22,6 @@ Thanks to Ansible, we can perform parallel and multiple tasks
 
 
 
-```ansible-playbook playbook.yml -f 10```
+```ansible-playbook myPlayBook.yml -f 10```
 
-ansible-lint verify-apache.yml
+```ansible-lint myPlayBook.yml```
