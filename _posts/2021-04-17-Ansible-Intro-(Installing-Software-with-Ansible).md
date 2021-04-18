@@ -28,7 +28,7 @@ At first , we create project folder
 
 We write the machines in the inventory file to determine which machines the commands will run on
   ```
-  # hosts (Inventory file)
+  # hosts.txt (Inventory file)
   [test]
   192.168.1.143
   ```
@@ -39,8 +39,8 @@ We write the machines in the inventory file to determine which machines the comm
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
 
 
+	ansible-playbook --list-tasks myPlayBook.yml
 
+  	ansible-playbook -i hosts.txt myPlayBook.yml
 
-  ansible-playbook myPlayBook.yml -f 10
-
-  ansible-lint myPlayBook.yml
+  
