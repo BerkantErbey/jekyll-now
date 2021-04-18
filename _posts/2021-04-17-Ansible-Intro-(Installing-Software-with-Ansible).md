@@ -24,8 +24,8 @@ Thanks to Ansible, we can perform parallel and multiple tasks
 
 At first , we create project folder
 
-  mkdir -pv testLab
-  cd testLab
+  ```mkdir -pv testLab```
+  ```cd testLab```
 
 We write the machines in the inventory file to determine which machines the commands will run on.
   ```
@@ -47,7 +47,8 @@ This playbook contains 3 tasks.
 2.Add qbittorrent's repo to host
 
 3.Install qbittorrent to host
-
+  mkdir -pv testLab
+  cd testLab
 
 
 
