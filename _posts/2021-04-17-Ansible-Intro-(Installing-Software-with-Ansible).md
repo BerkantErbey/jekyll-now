@@ -54,7 +54,6 @@ This playbook contains 3 tasks.
 
   {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
 
-
 We run our commands on desired machines with the following command
 
-	```ansible-playbook -i hosts.txt myPlayBook.yml```
+  ```ansible-playbook -i hosts.txt myPlayBook.yml```
