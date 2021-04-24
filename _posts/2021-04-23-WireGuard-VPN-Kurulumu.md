@@ -39,7 +39,7 @@ wg genkey | tee privatekey | wg pubkey > publickey
 ```
 * Sunucuda IP paketlerini yönlendirme özelliğini açıyoruz.
 
-`sudo vim /etc/sysctl.conf` içerisinde `net.ipv4.ip_forward=1` satırını yorumdan çıkarmamız yeterli oluyor. Değiştirdiğimiz ayarın aktif olması için `sudo sysctl -p` komutunu çalıştırıyoruz.
+`/etc/sysctl.conf` içerisinde `net.ipv4.ip_forward=1` satırını yorumdan çıkarmamız yeterli oluyor. Değiştirdiğimiz ayarın aktif olması için `sudo sysctl -p` komutunu çalıştırıyoruz.
 
 * Güvenlik duvarı ayarlamalarını yapmaya başlıyoruz. Sunucu olarak Ubuntu kullandığımdan ufw yi kullanacağım.
 
@@ -51,48 +51,14 @@ sudo ufw allow VPNPortu/udp
 sudo ufw enable
 ```
 
-* Sunucuda gerçekleştireceğimiz son adım
+* Sunucuda gerçekleştireceğimiz son adım wireguard protokolünün kullanacağı bacağın ayarlamalarını yapmak ve bu ayarlamaları `sudo wg-quick up wg0` komutuyla aktifleştiriyoruz.
 
-## Simple use-case demo (Installing a software)
+{% gist 94aad68564c44161354db4f45192c042 %}
 
-Sometimes we need to install package/software to many servers. In such cases, we can use the automation tool like Ansible.
-Thanks to Ansible, we can perform parallel and multiple tasks
+### İstemcide yapılacak ayarlamalar
 
-At first , we create project folder
+* Sunucu adımlarında olduğu gibi wireguard paketi kuruyoruz ve açık,kapalı anahtarlarımızı üretiyoruz.
 
-```mkdir -pv testLab && cd testLab```
+* İstemcide wg bacağının ayarlamaları aşağıda bulunmaktadır. Sunucu tarafında olduğu gibi aktifleştiriyoruz.
 
-We write the machines in the inventory file to determine which machines the commands will run on.
-  ```
-  # hosts.txt (Inventory file)
-  [test]
-  192.168.1.143
-  ```
-
-I solved the authentication problem on the host machine by adding the main machine's public key under the authorized_keys file (/root/.ssh/authorized_keys)
-
-We can list tasks in myPlaybook.yml with this command  
-
-  ```ansible-playbook --list-tasks myPlayBook.yml```
-
-This playbook contains 3 tasks.
-
-1.Remove tixati program on host
-
-{% gist c1f14b461868fc75bc8c22f3568cfa4f %}
-
-2.Add qbittorrent's repo to host
-
-{% gist b735ef3ce1546ec66bd1151650458f37 %}
-
-3.Install qbittorrent to host
-
-{% gist 18496abe2110db95f55c17aee3e97004 %}
-
-You can access the full playbook here
-
-  {% gist 87c1ab6de1f3fd40728db58e2d7e4097 %}
-
-We run our commands on desired machines with the following command
-
-```ansible-playbook -i hosts.txt myPlayBook.yml```
+{% gist 23afb965e4cddbe3eef788b7892179b6 %}
