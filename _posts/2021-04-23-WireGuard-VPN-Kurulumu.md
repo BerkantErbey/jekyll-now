@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-Inline-style:
+
 ![alt text](https://commons.wikimedia.org/wiki/File:Logo_of_WireGuard.svg#/media/File:Logo_of_WireGuard.svg "WireGuard Logo")
 
 
