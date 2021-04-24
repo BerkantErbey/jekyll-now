@@ -4,26 +4,30 @@ published: true
 
 ![alt text](https://www.wireguard.com/img/wireguard.svg "WireGuard Logo")
 
-![alt text][logo]
-
-[logo]: https://www.wireguard.com/img/wireguard.svg "Logo Title Text 2"
 
 
 
-In this post, I will explain
-## What is Wireguard VPN?
-  * RedHat defines it as follow "Simple, **agentless** it automation that anyone can use". Agentless means that there is no need for any ansible service to work in the environment to be managed.
-## How to install Ansible?
+Bu blogdaki ilk Türkçe yazım...
 
-  sudo apt update && sudo apt install software-properties-common -y
+## WireGuard VPN Nedir?
+  * WireGuard ücretsiz ve açık kaynaklı bir VPN protokolüdür. Bu VPN protokolü UDP paketlerini kullanır. Diğer VPN protokollerinden farkı ise küçük kod tabanı sayesinde daha az saldırı yüzeyi sunması, daha fazla bantgenişliğini daha düşük gecikmeyle destekleyebilmesidir. Daha küçük kod tabanına sahip olması büyük takımlar yerine bireysel kullanıcıların da kodu rahatlıkla inceleyebilmesi anlamına geliyor.
 
-  sudo apt-add-repository --yes --update ppa:ansible/ansible
+## WireGuard Nasıl Çalışır?
 
-  sudo apt install ansible -y
+  * WireGuard SSH protokolüyle temelde aynı şekilde çalışır. Sunucu ve istemci kendi aralarında açık anahtarlarını paylaşırlar. Diğer VPN protokollerinde olduğu gibi bağlantıları yönetmeye, aradaki bağlantının durumu hakkında endişelenmeye, arka plan servislerini yönetmeye ihtiyaç yoktur.
 
-Checking whether is working
+## Kurulum
 
-```ansible all -m ping --ask-pass```
+Temelde elimizde bir sunucu ve en az bir tane istemci olmalı. Sunucu için herhangi bir bulut sağlayıcıdan sanal makine kiralayabilirsiniz.
+
+
+### Sunucuda yapılacak ayarlamalar
+
+Wireguard paketi kurulur.
+```apt update && apt install wireguard```
+
+
+
 
 
 ## Simple use-case demo (Installing a software)
