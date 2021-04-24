@@ -23,11 +23,11 @@ Temelde elimizde bir sunucu ve en az bir tane istemci olmalı. Sunucu için herh
 
 ### Sunucuda yapılacak ayarlamalar
 
-Wireguard paketi kurulur.
+* Wireguard paketi kurulur.
 
 ```apt update && apt install wireguard```
 
-Sunucuda açık ve kapalı anahtarları üretiriz.
+* Sunucuda açık ve kapalı anahtarları üretiriz.
 
 ```shell
 # Wireguard ile alakalı ayarlamaların olduğu dizin
@@ -37,7 +37,21 @@ umask 077
 # Açık ve kapalı anahtarları üretme
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
+* Sunucuda IP paketlerini yönlendirme özelliğini açıyoruz.
 
+`sudo vim /etc/sysctl.conf` içerisinde `net.ipv4.ip_forward=1` satırını yorumdan çıkarmamız yeterli oluyor. Değiştirdiğimiz ayarın aktif olması için `sudo sysctl -p` komutunu çalıştırıyoruz.
+
+* Güvenlik duvarı ayarlamalarını yapmaya başlıyoruz. Sunucu olarak Ubuntu kullandığımdan ufw yi kullanacağım.
+
+SSH protokolünün portuna ve VPN protokolü için kullanacağım udp portuna(kendi isteğinize göre bir port numarası seçebilirsiniz) izin verip güvenlik duvarını aktifleştiriyorum.
+
+```shell
+sudo ufw allow ssh
+sudo ufw allow VPNPortu/udp
+sudo ufw enable
+```
+
+* Sunucuda gerçekleştireceğimiz son adım
 
 ## Simple use-case demo (Installing a software)
 
