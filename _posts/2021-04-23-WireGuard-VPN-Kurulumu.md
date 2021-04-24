@@ -4,6 +4,10 @@ published: true
 
 ![alt text](https://www.wireguard.com/img/wireguard.svg "WireGuard Logo")
 
+![alt text][logo]
+
+[logo]: https://www.wireguard.com/img/wireguard.svg "Logo Title Text 2"
+
 
 
 In this post, I will explain
