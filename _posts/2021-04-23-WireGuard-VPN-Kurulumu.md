@@ -24,10 +24,19 @@ Temelde elimizde bir sunucu ve en az bir tane istemci olmalı. Sunucu için herh
 ### Sunucuda yapılacak ayarlamalar
 
 Wireguard paketi kurulur.
+
 ```apt update && apt install wireguard```
 
+Sunucuda açık ve kapalı anahtarları üretiriz.
 
-
+```shell
+# Wireguard ile alakalı ayarlamaların olduğu dizin
+cd /etc/wireguard
+# Dizin izinlerini ayarlama (root kullanıcısıyla giriş yaptığınızdan emin olun)
+umask 077
+# Açık ve kapalı anahtarları üretme
+wg genkey | tee privatekey | wg pubkey > publickey
+```
 
 
 ## Simple use-case demo (Installing a software)
