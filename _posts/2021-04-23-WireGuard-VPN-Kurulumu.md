@@ -2,7 +2,7 @@
 published: true
 ---
 
-![alt text](https://commons.wikimedia.org/wiki/File:Logo_of_WireGuard.svg#/media/File:Logo_of_WireGuard.svg "WireGuard Logo")
+![alt text](https://www.wireguard.com/img/wireguard.svg "WireGuard Logo")
 
 
 
