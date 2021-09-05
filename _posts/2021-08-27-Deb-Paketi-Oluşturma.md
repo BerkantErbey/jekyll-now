@@ -27,7 +27,7 @@ published: true
 gcc random.c -o random
 # Oluşan dosyanın tipi
 file random
-#random: ELF 64-bit LSB pie executable,...
+>random: ELF 64-bit LSB pie executable,...
 ```
   * Yükleme dizinini oluşturup ilgili düzenlemeleri yapıyoruz. (/usr/local/bin olarak seçiyorum)
 
@@ -57,3 +57,5 @@ which random
 random
 >Random number is 93
 ```
+
+Bir sonraki yazımızda görüşmek üzere ;)
