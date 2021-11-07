@@ -21,8 +21,16 @@ published: true
 
     >ssh-audit localhost
 
+![alt text](https://berkanterbey.github.io/images/002.png "ssh-audit komutunun çıktısı")
+
 ![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
 
+  * Yapacağımız işlemi kısaca özetlersek
+    * sshd_config hedef makineye kopyalamak
+    * sshd_config de belirtilen hostkeyleri **yoksa oluşturmak**
+    * ssh servisini yeniden başlatmak
+
+{% gist 9668e9b36b7ca93c1fb399369f41ae60 %}
 
   
 
