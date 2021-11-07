@@ -14,7 +14,12 @@ published: true
   * ssh-audit kurulur.
 {% gist f831cf512355fd37bcc2b1c3f54f518c %}
 
-  * control dosyasının içeriği
+  * sshd_config ayarları yapılarak güvenliği arttırılacak makine taratılır. İster uzak bir makineden ister kendisinden taratabiliriz.
+  
+  ```ssh-audit localhost```
+  ```ssh-audit remoteHost```
+  
+  
 
 {% gist 385c8c1ef4c298e69d764f1456895dd1 %}
 
