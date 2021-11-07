@@ -21,7 +21,7 @@ published: true
 
     >ssh-audit localhost
 
-  
+![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
 
 
   
