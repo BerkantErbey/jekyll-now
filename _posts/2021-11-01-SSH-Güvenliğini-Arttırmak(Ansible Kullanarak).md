@@ -37,11 +37,7 @@ published: true
 
   * Ansible ile dağıtırken her işletim sistemi sürümüne göre desteklenen algoritmalarda değişiklikler olabilir. Bundan dolayı playbook umuza sunucuların işletim sistemini bakıp, sadece Ubuntu 20.04 (focal) için çalışacak şekilde ayarlanacak. Dilerseniz farklı işletim sistemlerinide benzer yöntemle ekleyebilirsiniz.
 
-
 ![alt text](https://berkanterbey.github.io/images/004.png "ansible komut çıktısı çıktısı")
-
-
-
 
 {% 713f9e1675998fea47d7a05bdb636e2f %}
 
@@ -49,11 +45,6 @@ published: true
     * sshd_config hedef makineye kopyalamak (var olan izin ve sahiplikleri koruyarak)
     * sshd_config de belirtilen hostkeyleri **yoksa oluşturmak**
     * ssh servisini yeniden başlatmak (**değişiklik olmuşsa**)
-
-
-
-
-
 
 
 
