@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 
@@ -37,15 +37,19 @@ published: false
 
   * Ansible ile dağıtırken her işletim sistemi sürümüne göre desteklenen algoritmalarda değişiklikler olabilir. Bundan dolayı playbook umuza sunucuların işletim sistemini bakıp, sadece Ubuntu 20.04 (focal) için çalışacak şekilde ayarlanacak. Dilerseniz farklı işletim sistemlerinide benzer yöntemle ekleyebilirsiniz.
 
-![alt text](https://berkanterbey.github.io/images/004.png "ansible komut çıktısı çıktısı")
+  * Aşağıdaki ekran görüntüsünde host02.txt dosyasında belirtilen makinelerde işletim sistemi kod adı bilgisine ulaşıyoruz.
+
+![alt text](https://berkanterbey.github.io/images/004.png "Ansible İşletim Sistemi tanıma")
+
 
 {% 713f9e1675998fea47d7a05bdb636e2f %}
+
+  * 
 
   * Yapacağımız işlemi kısaca özetlersek
     * sshd_config hedef makineye kopyalamak (var olan izin ve sahiplikleri koruyarak)
     * sshd_config de belirtilen hostkeyleri **yoksa oluşturmak**
     * ssh servisini yeniden başlatmak (**değişiklik olmuşsa**)
-
 
 
 {% gist b9fb9c07d373289ad40fc671c30ced24 %}
@@ -60,13 +64,6 @@ file random
 >random: ELF 64-bit LSB pie executable,...
 ```
 
-
-  * Yükleme dizinini oluşturup ilgili düzenlemeleri yapıyoruz. (/usr/local/bin olarak seçiyorum)
-
-![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
-
-
-
 ```shell
 # DEBIAN dizini ve yükleme dizini oluşturulur.
 mkdir -p random_1.21-3.amd64/DEBIAN
@@ -76,22 +73,6 @@ cp control random_1.21-3.amd64/DEBIAN/
 cp random random_1.21-3.amd64/usr/local/bin/
 # Alttaki komut çalıştıktan sonra random_1.21-3.amd64.deb isimli paket oluşur.
 dpkg-deb --build --root-owner-group random_1.21-3.amd64
-```
-
-
-## .deb Paketinin Kurulumu
-
-  * Oluşturduğumuz .deb uzantılı paketi kuralım.
-
-```shell
-# dpkg ile .deb uzantılı paketi yüklüyoruz sistemimize.
-sudo dpkg -i random_1.21-3.amd64
-
-# Programının yüklenip yüklenmediğini anlamak için
-which random
->/usr/bin/random
-random
->Random number is 93
 ```
 
 Bir sonraki yazımızda görüşmek üzere ;)
