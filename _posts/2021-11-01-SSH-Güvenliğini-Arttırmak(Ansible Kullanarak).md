@@ -44,7 +44,6 @@ published: true
 
 {% 713f9e1675998fea47d7a05bdb636e2f %}
 
-  * 
 
   * Yapacağımız işlemi kısaca özetlersek
     * sshd_config hedef makineye kopyalamak (var olan izin ve sahiplikleri koruyarak)
