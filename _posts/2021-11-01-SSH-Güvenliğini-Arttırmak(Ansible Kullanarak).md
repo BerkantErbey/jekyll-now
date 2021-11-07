@@ -22,17 +22,9 @@ published: true
 ```ssh-audit localhost```
   
 
+
   
-  
-![alt text]({{site.baseurl}}/_posts/photo_2021-11-01_11-14-55.jpg "Çıktı01")
 
- 
-![ssh-audit command result 1st Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/002.png)
-
-![002.png]({{site.baseurl}}/_posts/002.png)
-
-
-![ssh-audit command result 2nd Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/003.png)
 
 {% gist 385c8c1ef4c298e69d764f1456895dd1 %}
 
@@ -52,7 +44,13 @@ gcc random.c -o random
 file random
 >random: ELF 64-bit LSB pie executable,...
 ```
+
+
   * Yükleme dizinini oluşturup ilgili düzenlemeleri yapıyoruz. (/usr/local/bin olarak seçiyorum)
+
+![alt text](https://berkanterbey.github.io/images/003.png "WireGuard Logo")
+
+
 
 ```shell
 # DEBIAN dizini ve yükleme dizini oluşturulur.
