@@ -19,9 +19,10 @@ published: true
   ```ssh-audit localhost```
   ```ssh-audit remoteHost```
   
-![ssh-audit command result 1st Screenshot]({{site.baseurl}}/berkanterbey.github.io/images/002.png)
+ 
+![ssh-audit command result 1st Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/002.png)
 
-![ssh-audit command result 2nd Screenshot]({{site.baseurl}}/berkanterbey.github.io/images/003.png)
+![ssh-audit command result 2nd Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/003.png)
 
 {% gist 385c8c1ef4c298e69d764f1456895dd1 %}
 
