@@ -37,7 +37,6 @@ published: true
 
   * Ansible ile dağıtırken her işletim sistemi sürümüne göre desteklenen algoritmalarda değişiklikler olabilir. Bundan dolayı playbook umuza sunucuların işletim sistemini bakıp, sadece Ubuntu 20.04 (focal) için çalışacak şekilde ayarlanacak. Dilerseniz farklı işletim sistemlerinide benzer yöntemle ekleyebilirsiniz.
 
-* 
 
 ![alt text](https://berkanterbey.github.io/images/004.png "ansible komut çıktısı çıktısı")
 
