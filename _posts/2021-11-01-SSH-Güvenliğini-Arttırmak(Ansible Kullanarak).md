@@ -3,7 +3,7 @@ published: true
 ---
 
 
-![alt text](https://www.wireguard.com/img/wireguard.svg "WireGuard Logo")
+
 
 ## Giriş
   * Bu yazımda **ssh-audit** aracıyla hedef makinedeki ssh bağlantı güvenliği açıklarını bulup, açıkları kapamak için gereken değişiklikleri **Ansible** ile yapacağız.
