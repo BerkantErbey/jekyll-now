@@ -27,11 +27,24 @@ published: true
 
   * Çıkan sonuca göre anahtar değişim algoritmalarında (KexAlgorithms), HostKeyAlgoritms de, kullanılan şifreleme algoritmalarında (ciphers) ve mesaj kimlik doğrulama kodlarında yeşille belirtilen algoritmalar güvenli olduğundan kalacak, sarı ve kırmızı olanlar sshd_config den çıkartılacak.
 
+  * Ubuntu 20.04 Focal için örnek sshd_config dosyamız.
+
+{% gist 9668e9b36b7ca93c1fb399369f41ae60 %}
+
 ## Ansible ile Otomasyon
 
   * Birden fazla sunucunun olduğu bir ortamda, teker teker bu ayarları dağıtmak çok fazla zaman alacağından **Ansible** ile dağıtacağız.
 
   * Ansible ile dağıtırken her işletim sistemi sürümüne göre desteklenen algoritmalarda değişiklikler olabilir. Bundan dolayı playbook umuza sunucuların işletim sistemini bakıp, sadece Ubuntu 20.04 (focal) için çalışacak şekilde ayarlanacak. Dilerseniz farklı işletim sistemlerinide benzer yöntemle ekleyebilirsiniz.
+
+* 
+
+![alt text](https://berkanterbey.github.io/images/004.png "ansible komut çıktısı çıktısı")
+
+
+
+
+{% 713f9e1675998fea47d7a05bdb636e2f %}
 
   * Yapacağımız işlemi kısaca özetlersek
     * sshd_config hedef makineye kopyalamak (var olan izin ve sahiplikleri koruyarak)
@@ -40,15 +53,10 @@ published: true
 
 
 
-  
-* Ubuntu 20.04 Focal için örnek sshd_config dosyamız.
-
-{% gist 9668e9b36b7ca93c1fb399369f41ae60 %}
 
 
-## .deb Paketi Nasıl Oluşturulur?
 
-  * Öncelikle çalıştırılabilir bir dosyaya ihtiyacımız var. C dilinde ufak bir program yazıp onu derleyeceğim.
+
 
 {% gist b9fb9c07d373289ad40fc671c30ced24 %}
 
