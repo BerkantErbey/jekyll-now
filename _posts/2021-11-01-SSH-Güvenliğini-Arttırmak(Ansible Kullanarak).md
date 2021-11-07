@@ -17,7 +17,9 @@ published: true
   * sshd_config ayarları yapılarak güvenliği arttırılacak makine taratılır. İster uzak bir makineden ister kendisinden taratabiliriz.
   
   ```ssh-audit localhost```
+  
   ```ssh-audit remoteHost```
+  
   
   ![photo_2021-11-01_11-14-55.jpg]({{site.baseurl}}/_posts/photo_2021-11-01_11-14-55.jpg)
 
