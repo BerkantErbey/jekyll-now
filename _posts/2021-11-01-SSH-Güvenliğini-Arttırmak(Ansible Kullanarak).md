@@ -22,6 +22,9 @@ published: true
  
 ![ssh-audit command result 1st Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/002.png)
 
+![002.png]({{site.baseurl}}/_posts/002.png)
+
+
 ![ssh-audit command result 2nd Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/003.png)
 
 {% gist 385c8c1ef4c298e69d764f1456895dd1 %}
