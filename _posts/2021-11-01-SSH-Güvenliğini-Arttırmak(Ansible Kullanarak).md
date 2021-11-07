@@ -1,17 +1,22 @@
 ---
-published: false
+published: true
 ---
 
 ## Giriş
-  * Bu yazımda ssh-audit aracıyla hedef makinedeki ssh bağlantı güvenliği açıklarını bulup, açıkları kapamak için gereken değişiklikleri Ansible ile yapacağız.
+  * Bu yazımda **ssh-audit** aracıyla hedef makinedeki ssh bağlantı güvenliği açıklarını bulup, açıkları kapamak için gereken değişiklikleri **Ansible** ile yapacağız.
 
 ## .sshd_config ve ssh_config Arasındaki Fark?
   * sshd nin açılımı ssh daemondur. SSH Portuna gelen bağlantıları dinler. sshd_config bulunduğumuz makineye gelen bağlantıları karşılamada kullanılan ayarlardır.
-  ssh_config de ise ssh istemcisi için yapılan ayarlar bulunur. Yani ssh_config başka makinelere bağlanırken kullanılan ayarlar içindir.
+  * ssh_config de ise ssh istemcisi için yapılan ayarlar bulunur. Yani ssh_config başka makinelere bağlanırken kullanılan ayarlar içindir.
 
-## .deb Paketleri Hakkında Genel Bilgi
+## ssh-audit ile Açıkları Bulmak
 
-  * .deb paketleri control(paket hakkında temel bilgiler) dosyası ve yükleme öncesi ve sonrası betikler(postrm,postinst,prerm,preinst) ve yükleme dizininden oluşur. Yükleme dizini linux dosya sistemindeki gibi olmalıdır. Yani /usr/bin /usr/sbin /usr/local/bin /opt gibi.
+  * ssh-audit kurulur.
+  ```shell
+  sudo apt install ssh-audit
+  OR
+  sudo snap install ssh-audit
+  ```
 
   * control dosyasının içeriği
 
