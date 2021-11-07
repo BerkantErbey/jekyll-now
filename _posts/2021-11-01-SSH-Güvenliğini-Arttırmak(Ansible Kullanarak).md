@@ -24,7 +24,7 @@ published: true
 
   
   
-  ![photo_2021-11-01_11-14-55.jpg]({{site.baseurl}}/_posts/photo_2021-11-01_11-14-55.jpg)
+![photo_2021-11-01_11-14-55.jpg]({{site.baseurl}}/_posts/photo_2021-11-01_11-14-55.jpg)
 
  
 ![ssh-audit command result 1st Screenshot]({{site.baseurl}}/https://berkanterbey.github.io/images/002.png)
