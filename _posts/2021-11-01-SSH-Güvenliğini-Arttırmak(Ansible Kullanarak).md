@@ -12,11 +12,7 @@ published: true
 ## ssh-audit ile Açıkları Bulmak
 
   * ssh-audit kurulur.
-  ```
-  sudo apt install ssh-audit
-  OR
-  sudo snap install ssh-audit
-  ```
+{% gist f831cf512355fd37bcc2b1c3f54f518c %}
 
   * control dosyasının içeriği
 
