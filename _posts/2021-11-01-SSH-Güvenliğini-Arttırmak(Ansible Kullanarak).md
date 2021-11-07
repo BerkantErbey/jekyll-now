@@ -18,8 +18,9 @@ published: true
 {% gist f831cf512355fd37bcc2b1c3f54f518c %}
 
   * sshd_config ayarları yapılarak güvenliği arttırılacak makine taratılır. İster uzak bir makineden ister kendisinden taratabiliriz.
-  
-```ssh-audit localhost```
+
+  	ssh-audit localhost
+
   
 
 
@@ -48,7 +49,7 @@ file random
 
   * Yükleme dizinini oluşturup ilgili düzenlemeleri yapıyoruz. (/usr/local/bin olarak seçiyorum)
 
-![alt text](https://berkanterbey.github.io/images/003.png "WireGuard Logo")
+![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
 
 
 
