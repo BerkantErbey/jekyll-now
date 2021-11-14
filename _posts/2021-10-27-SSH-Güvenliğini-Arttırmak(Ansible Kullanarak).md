@@ -55,23 +55,6 @@ published: true
 
   * Yazdığımız kodu derleyip çalıştırılabilir dosya haline getiriyoruz. 
 
-```shell
-# Derleme
-gcc random.c -o random
-# Oluşan dosyanın tipi
-file random
->random: ELF 64-bit LSB pie executable,...
-```
 
-```shell
-# DEBIAN dizini ve yükleme dizini oluşturulur.
-mkdir -p random_1.21-3.amd64/DEBIAN
-mkdir -p random_1.21-3.amd64/usr/local/bin
-
-cp control random_1.21-3.amd64/DEBIAN/
-cp random random_1.21-3.amd64/usr/local/bin/
-# Alttaki komut çalıştıktan sonra random_1.21-3.amd64.deb isimli paket oluşur.
-dpkg-deb --build --root-owner-group random_1.21-3.amd64
-```
 
 Bir sonraki yazımızda görüşmek üzere ;)
