@@ -20,12 +20,8 @@ published: true
   * sshd_config ayarları yapılarak güvenliği arttırılacak makine taratılır. İster uzak bir makineden ister kendisinden taratabiliriz.
 
     >ssh-audit localhost
-
-![alt text](https://berkanterbey.github.io/images/002.png "ssh-audit komutunun çıktısı")
-
-![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
-
-  * Çıkan sonuca göre anahtar değişim algoritmalarında (KexAlgorithms), HostKeyAlgoritms de, kullanılan şifreleme algoritmalarında (ciphers) ve mesaj kimlik doğrulama kodlarında yeşille belirtilen algoritmalar güvenli olduğundan kalacak, sarı ve kırmızı olanlar sshd_config den çıkartılacak.
+  
+* Çıkan sonuca göre anahtar değişim algoritmalarında (KexAlgorithms), HostKeyAlgoritms de, kullanılan şifreleme algoritmalarında (ciphers) ve mesaj kimlik doğrulama kodlarında yeşille belirtilen algoritmalar güvenli olduğundan kalacak, sarı ve kırmızı olanlar sshd_config den çıkartılacak.
 
   * Ubuntu 20.04 Focal için örnek sshd_config dosyamız.
 
@@ -39,7 +35,6 @@ published: true
 
   * Aşağıdaki ekran görüntüsünde host02.txt dosyasında belirtilen makinelerde işletim sistemi kod adı bilgisine ulaşıyoruz.
 
-![alt text](https://berkanterbey.github.io/images/004.png "Ansible İşletim Sistemi tanıma")
 
 
 {% 713f9e1675998fea47d7a05bdb636e2f %}
