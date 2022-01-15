@@ -6,7 +6,7 @@ published: true
 
 
 ## Giriş
-  * Bu yazımda **ssh-audit** aracıyla hedef makinedeki ssh bağlantı güvenliği açıklarını bulup, açıkları kapamak için gereken değişiklikleri **Ansible** ile yapacağız.
+  * Merhaba, Bu yazımda **ssh-audit** aracıyla hedef makinedeki ssh bağlantı güvenliği açıklarını bulup, açıkları kapamak için gereken değişiklikleri **Ansible** ile yapacağız.
 
 ## .sshd_config ve ssh_config Arasındaki Fark?
   * sshd nin açılımı ssh daemondur. SSH Portuna gelen bağlantıları dinler. sshd_config bulunduğumuz makineye gelen bağlantıları karşılamada kullanılan ayarlardır.
