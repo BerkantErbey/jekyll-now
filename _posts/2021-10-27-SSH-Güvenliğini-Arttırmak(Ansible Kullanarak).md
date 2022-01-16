@@ -51,7 +51,6 @@ published: true
     * ssh servisini yeniden başlatmak (**değişiklik olmuşsa**)
 
 
-{% gist b9fb9c07d373289ad40fc671c30ced24 %}
 
   * Yazdığımız kodu derleyip çalıştırılabilir dosya haline getiriyoruz. 
 
