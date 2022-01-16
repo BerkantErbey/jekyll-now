@@ -3,8 +3,6 @@ published: true
 ---
 
 
-
-
 ## Giriş
   * Merhaba, Bu yazımda **ssh-audit** aracıyla hedef makinedeki ssh bağlantı güvenliği açıklarını bulup, açıkları kapamak için gereken değişiklikleri **Ansible** ile yapacağız.
 
@@ -49,6 +47,8 @@ published: true
     * sshd_config hedef makineye kopyalamak (var olan izin ve sahiplikleri koruyarak)
     * sshd_config de belirtilen hostkeyleri **yoksa oluşturmak**
     * ssh servisini yeniden başlatmak (**değişiklik olmuşsa**)
+
+{% gist 3189b4eff66986f91bdf1c5e478cb421 %}  
 
 
 Bir sonraki yazımızda görüşmek üzere ;)
