@@ -52,7 +52,6 @@ published: true
 
 
 
-  * Yazdığımız kodu derleyip çalıştırılabilir dosya haline getiriyoruz. 
 
 
 
