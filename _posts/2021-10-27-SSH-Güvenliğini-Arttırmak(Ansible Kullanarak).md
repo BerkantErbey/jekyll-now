@@ -51,8 +51,4 @@ published: true
     * ssh servisini yeniden başlatmak (**değişiklik olmuşsa**)
 
 
-
-
-
-
 Bir sonraki yazımızda görüşmek üzere ;)
