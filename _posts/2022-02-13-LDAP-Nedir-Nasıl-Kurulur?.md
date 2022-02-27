@@ -41,15 +41,16 @@ published: true
 
   * Paket kurulurken kendiliğinden search base i oluşturuyor /etc/resolv.conf daki bilgilere göre.
 
-    > sudo slapcat
+    >sudo slapcat
   * Komutun çıktısı sizin durumunuza uymuyorsa aşağıdaki komutla değiştirebilirsiniz (Örn: **cloudsio.com**) 
 
-    > sudo dpkg-reconfigure slapd
+    >sudo dpkg-reconfigure slapd
 
   ![alt text](https://berkanterbey.github.io/images/21-26.gif "dpkg-reconfigure slapd adımları")
   
-    > sudo slapcat
+  >sudo slapcat
 
   ![alt text](https://berkanterbey.github.io/images/027.png "slapcat komut çıktısı")
 
 Bir sonraki yazımızda görüşmek üzere ;)
+
