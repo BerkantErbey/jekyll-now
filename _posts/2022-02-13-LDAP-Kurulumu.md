@@ -1,10 +1,10 @@
 ---
 published: true
 ---
-cloudsio
+
 
 ## Giriş
-  * Merhaba, Bu yazımda **LDAP** hakkında konuşacağız. LDAP nedir , ne için kullanılır , nasıl kurulur gibi sorulara cevap arayacağız.
+  * Merhaba, Bu yazımda **LDAP** hakkında konuşacağız. LDAP nedir , ne için kullanılır , nasıl kurulur gibi sorulara cevap arayacağız. Ek bilgiler ve öğrendiklerimizi uygulama
 
 ## LDAP Nedir??
   * Türkçesi Basit Dizin Erişim Protokolüdür. 
@@ -26,9 +26,6 @@ cloudsio
 
     >ssh-audit localhost
 
-![alt text](https://berkanterbey.github.io/images/002.png "ssh-audit komutunun çıktısı")
-
-![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
 
 
 {% gist 9668e9b36b7ca93c1fb399369f41ae60 %}
@@ -42,22 +39,14 @@ cloudsio
 
   ![alt text](https://berkanterbey.github.io/images/020.png "slapd parola")
 
-  * Ansible ile dağıtırken her işletim sistemi sürümüne göre desteklenen algoritmalarda değişiklikler olabilir. Bundan dolayı playbook umuza sunucuların işletim sistemini bakıp, sadece Ubuntu 20.04 (focal) için çalışacak şekilde ayarlanacak. Dilerseniz farklı işletim sistemlerinide benzer yöntemle ekleyebilirsiniz.
+  * Paket kurulurken kendiliğinden search base i oluşturuyor /etc/resolv.conf daki bilgilere göre.
 
-  * Aşağıdaki ekran görüntüsünde host02.txt dosyasında belirtilen makinelerde işletim sistemi kod adı bilgisine ulaşıyoruz.
+    > sudo slapcat
+  * Komutun çıktısı sizin durumunuza uymuyorsa aşağıdaki komutla değiştirebilirsiniz (Örn: **cloudsio.com**) 
 
-![alt text](https://berkanterbey.github.io/images/004.png "Ansible İşletim Sistemi tanıma")
-
-
-{% gist 713f9e1675998fea47d7a05bdb636e2f %}
-
-
-  * Yapacağımız işlemi kısaca özetlersek
-    * sshd_config hedef makineye kopyalamak (var olan izin ve sahiplikleri koruyarak)
-    * sshd_config de belirtilen hostkeyleri **yoksa oluşturmak**
-    * ssh servisini yeniden başlatmak (**değişiklik olmuşsa**)
-
-{% gist 3189b4eff66986f91bdf1c5e478cb421 %}  
-
+    > sudo dpkg-reconfigure slapd
+  ![alt text](https://berkanterbey.github.io/images/21-26.gif "dpkg-reconfigure slapd adımları")
+    > sudo slapcat
+  ![alt text](https://berkanterbey.github.io/images/027.png "slapcat komut çıktısı")
 
 Bir sonraki yazımızda görüşmek üzere ;)
