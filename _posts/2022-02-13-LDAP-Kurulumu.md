@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-
+cloudsio
 
 ## Giriş
   * Merhaba, Bu yazımda **LDAP** hakkında konuşacağız. LDAP nedir , ne için kullanılır , nasıl kurulur gibi sorulara cevap arayacağız.
@@ -11,16 +11,18 @@ published: true
   * Aşama gözetilerek yapılan sınıflama(hiyerarşik) yapısına sahiptir.
   * Dizin servislerindeki amaç aranılan nesnenin/bilginin ağda nerede bulunduğudur. Dallanan bu yapıda her bir dal için **dn** adı verilen ayırt edici isim (distinguished name) bulunur.
   * LDAP TCP/IP protokolünü temel alır genellikle 389(tcp) portunu kullanır.
+  * LDAP sunucusunu dizin servisini ve protokolü tanımlamış özel bir **NoSQL** veritabanı diyebiliriz.
 
 ## LDAP Kullanım Alanları
 
-  * Kimlik Doğrulama
+  * Kimlik Doğrulama & Yetkilendirme
     * Linux tabanlı bir çok uygulamada (Jenkins, Gitlab,  Eposta Sunucuları ...)
-{% gist f831cf512355fd37bcc2b1c3f54f518c %}
-      * Bu gibi uygulamalarda kullandığımız ldap yapısına ait, bind user(dizinde arama/sorgu yapabilen sadece okuma yetkisi olan kullanıcı), kullanıcıların dizinde nerede bulunduğu, grupların dizinde nerede bulunduğunu girerek ldaptaki kullanıcı veya grupları kimlik doğrulama amacı ile kullanabiliriz.
-      
+      * Bu gibi uygulamalarda kullandığımız ldap yapısına ait, bind user(dizinde arama/sorgu yapabilen sadece okuma yetkisi olan kullanıcı), kullanıcıların ve grupların dizinde nerede bulunduğunu girerek ldaptaki kullanıcı veya grupları kimlik doğrulama amacı ile kullanabiliriz.
+        -- LDAP AYAR RESMİ --
 
-  * sshd_config ayarları yapılarak güvenliği arttırılacak makine taratılır. İster uzak bir makineden ister kendisinden taratabiliriz.
+  * Dizinde Çeşitli Objelerin Tutulması
+    * DNS Kayıtları
+    * Bilgisayarlar 
 
     >ssh-audit localhost
 
@@ -28,15 +30,17 @@ published: true
 
 ![alt text](https://berkanterbey.github.io/images/003.png "ssh-audit komutunun çıktısı")
 
-  * Çıkan sonuca göre anahtar değişim algoritmalarında (KexAlgorithms), HostKeyAlgoritms de, kullanılan şifreleme algoritmalarında (ciphers) ve mesaj kimlik doğrulama kodlarında yeşille belirtilen algoritmalar güvenli olduğundan kalacak, sarı ve kırmızı olanlar sshd_config den çıkartılacak.
-
-  * Ubuntu 20.04 Focal için örnek sshd_config dosyamız.
 
 {% gist 9668e9b36b7ca93c1fb399369f41ae60 %}
 
-## Ansible ile Otomasyon
+## LDAP Kurulumu
 
-  * Birden fazla sunucunun olduğu bir ortamda, teker teker bu ayarları dağıtmak çok fazla zaman alacağından **Ansible** ile dağıtacağız.
+  * Kurulum için Debian 11 (bullseye) bir sunucu seçtim. 
+  * Aşağıdaki komutla ilgili paketleri yüklüyoruz.
+
+    >sudo apt update && sudo apt install slapd ldap-utils -y
+
+  ![alt text](https://berkanterbey.github.io/images/020.png "slapd parola")
 
   * Ansible ile dağıtırken her işletim sistemi sürümüne göre desteklenen algoritmalarda değişiklikler olabilir. Bundan dolayı playbook umuza sunucuların işletim sistemini bakıp, sadece Ubuntu 20.04 (focal) için çalışacak şekilde ayarlanacak. Dilerseniz farklı işletim sistemlerinide benzer yöntemle ekleyebilirsiniz.
 
