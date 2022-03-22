@@ -1,0 +1,60 @@
+---
+published: true
+---
+
+
+## Giriş
+  * Merhaba, Bu yazımda **gnutls priority string** hakkında konuşacağız. Kısa bir yazı olacak :). Yazıyı yazmamın amacı hem not almak,
+gnuTLS is an encryption and certificate management library that was written for a specific purpose —
+to write a feature-complete replacement for OpenSSL that can be legally linked against GNU GPL-licensed code
+Simple client program to set up a TLS connection to some other computer. It sets up a TLS connection and forwards data from the standard input to the secured socket and vice versa.
+The GnuTLS priority strings specify the TLS session's handshake algorithms and options in a compact, easy-to-use format. These strings are intended as a user-specified override of the library defaults.
+
+## ... Nedir??
+  * GnuTLS , TLS SSL ve DTLS protokollerinin açık kaynak kodlu gerçeklemesini barındıran kütüphanedir.
+  * gnutls-cli , başka bir bilgisayarla tls bağlantısı kurmaya yarayan istemci yazılımıdır.
+  * GnuTLS priority string ise TLS bağlantısında kullanılacak algoritmaları ve seçenekleri anlaşılır bir düzende kullanmamıza yarar.
+  *  [Jekyll Now](http://github.com/barryclark/jekyll-now/)
+  * [Anahtar Kelimeler Tablosu](https://gnutls.org/manual/html_node/Priority-Strings.html#tab_003aprio_002dkeywords)
+  * [Protokoller ve Algoritmalar Tablosu](https://gnutls.org/manual/html_node/Priority-Strings.html#tab_003aprio_002dalgorithms)
+
+## LDAP Kullanım Alanları
+
+  * Kimlik Doğrulama & Yetkilendirme
+    * Linux tabanlı bir çok uygulamada (Jenkins, Gitlab,  Eposta Sunucuları ...)
+      * Bu gibi uygulamalarda kullandığımız ldap yapısına ait, bind user(dizinde arama/sorgu yapabilen sadece okuma yetkisi olan kullanıcı), kullanıcıların ve grupların dizinde nerede bulunduğunu girerek ldaptaki kullanıcı veya grupları kimlik doğrulama amacı ile kullanabiliriz.
+        -- LDAP AYAR RESMİ --
+
+  * Dizinde Çeşitli Objelerin Tutulması
+    * DNS Kayıtları
+    * Bilgisayarlar
+
+    >ssh-audit localhost
+
+
+
+{% gist 9668e9b36b7ca93c1fb399369f41ae60 %}
+
+## LDAP Kurulumu
+
+  * Kurulum için Debian 11 (bullseye) bir sunucu seçtim.
+  * Aşağıdaki komutla ilgili paketleri yüklüyoruz.
+
+    >sudo apt update && sudo apt install slapd ldap-utils -y
+
+  ![alt text](https://berkanterbey.github.io/images/020.png "slapd parola")
+
+  * Paket kurulurken kendiliğinden search base i oluşturuyor /etc/resolv.conf daki bilgilere göre.
+
+    >sudo slapcat
+  * Komutun çıktısı sizin durumunuza uymuyorsa aşağıdaki komutla değiştirebilirsiniz (Örn: **cloudsio.com**)
+
+    >sudo dpkg-reconfigure slapd
+
+  ![alt text](https://berkanterbey.github.io/images/21-26.gif "dpkg-reconfigure slapd adımları")
+
+  >sudo slapcat
+
+  ![alt text](https://berkanterbey.github.io/images/027.png "slapcat komut çıktısı")
+
+Bir sonraki yazımızda görüşmek üzere ;)
